@@ -1,0 +1,23 @@
+name: Publish verified demonstration
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore and verify original video
+        run: python3 tools/restore_demo.py
+      - name: Publish original MP4
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create v1.0.0 docs/demo/demo-v1.0.mp4
+          --target "$GITHUB_SHA"
+          --title "智变链 v1.0.0 · 原始演示视频"
+          --notes "2026-09-15 实际操作演示，使用模拟工业资料与真实模型调用。视频按原始 SHA-256 校验后归档，未重新编码。源码、PRD 和复盘资料见仓库 README。"

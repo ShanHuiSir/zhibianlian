@@ -13,3 +13,4 @@ __pycache__/
 *.sqlite3
 *.sqlite3-wal
 *.sqlite3-shm
+docs/demo/demo-v1.0.mp4

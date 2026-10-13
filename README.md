@@ -4,7 +4,7 @@
 
 本仓库保存参赛原型的源码、模拟输入、演示视频、需求基线和复盘资料。需要回顾项目时，先读 [项目复盘](docs/项目复盘.md)；需求与实现之间的差异见 [版本范围说明](docs/版本范围说明.md)。
 
-- [演示视频（MP4，约 4 分 19 秒）](docs/demo/demo-v1.0.mp4) · [视频解说词](docs/demo/视频解说词.md)
+- [演示视频（MP4，约 4 分 19 秒）](https://github.com/ShanHuiSir/zhibianlian/releases/download/v1.0.0/demo-v1.0.mp4) · [视频解说词](docs/demo/视频解说词.md)
 - [原始 PRD v1.0](docs/product/PRD-v1.0.md) · [测试与实测记录](docs/测试与实测记录.md)
 - [示例评审报告](docs/示例评审报告.pdf) · [示例部门处理清单](docs/示例部门处理清单.csv)
 - [Logo 素材与说明](brand/使用说明.md)
@@ -19,7 +19,9 @@
 
 需要 Python 3.11 或 3.12、Chrome / Edge，以及首次安装依赖时可用的网络。已验证环境为 macOS + Python 3.12 + Chrome；Windows 启动脚本已提供，尚未在 Windows 实机验证。服务默认只监听 `127.0.0.1:8765`。
 
-中文字体和演示视频使用 Git LFS 保存。先按 [Git LFS 官方说明](https://git-lfs.com/) 安装 Git LFS（macOS 可用 `brew install git-lfs`），再运行下面的克隆步骤。`git lfs pull` 用于确保下载的是完整字体和视频。直接下载仓库 ZIP 时可能只包含 LFS 指针，请优先使用 Git 克隆。
+中文字体使用 Git LFS 保存。先按 [Git LFS 官方说明](https://git-lfs.com/) 安装 Git LFS（macOS 可用 `brew install git-lfs`），再运行下面的克隆步骤。`git lfs pull` 用于确保下载的是完整字体。直接下载仓库 ZIP 时可能只包含字体的 LFS 指针，请优先使用 Git 克隆。
+
+演示视频从 [Release](https://github.com/ShanHuiSir/zhibianlian/releases/tag/v1.0.0) 下载。仓库同时保留视频的原始二进制分片；运行 `python3 tools/restore_demo.py`（Windows 用 `py tools/restore_demo.py`）可校验并还原为 `docs/demo/demo-v1.0.mp4`。还原视频不需要模型密钥或第三方 Python 依赖。
 
 macOS / Linux：
 
