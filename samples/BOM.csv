@@ -1,0 +1,3 @@
+﻿record_id,product_no,product_rev,part_no,revision,quantity
+BOM-001,CTRL-100,A,HSG-001,A,1
+BOM-002,CTRL-100,B,HSG-001,B,1

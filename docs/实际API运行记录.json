@@ -1,0 +1,1069 @@
+{
+  "description": "真实 DeepSeek 图像+文字请求；模拟资料；不含密钥或本机绝对路径。时间为分析开始至结果可查看，不含人工评审。",
+  "recording": {
+    "scenes": 12,
+    "continuous": true,
+    "synthetic_voice": "Tingting",
+    "speedup": false
+  },
+  "runs": [
+    {
+      "case": "录屏主案例",
+      "id": "R-3c1f78800361",
+      "state": "已评审",
+      "started": "2026-09-15T02:31:12.494831+00:00",
+      "ended": "2026-09-15T02:31:15.887645+00:00",
+      "seconds": 3.39,
+      "input_revision": 15,
+      "config": {
+        "model": "deepseek-flash",
+        "base_url": "https://api.deepseek.com",
+        "prompt_version": "drawing-v1.0",
+        "rule_version": "engineering-v1.0",
+        "cache": "none"
+      },
+      "calls": [
+        {
+          "document": "HSG-001_A.pdf",
+          "attempt": 1,
+          "seconds": 1.583,
+          "status": 200,
+          "usage": {
+            "prompt_tokens": 1352,
+            "completion_tokens": 82,
+            "total_tokens": 1434,
+            "prompt_tokens_details": {
+              "cached_tokens": 1152
+            },
+            "prompt_cache_hit_tokens": 1152,
+            "prompt_cache_miss_tokens": 200
+          },
+          "response_model": "deepseek-flash",
+          "response_id": "ffcf2e40-d448-4c27-9934-caa983cce219"
+        },
+        {
+          "document": "HSG-001_B.pdf",
+          "attempt": 1,
+          "seconds": 1.687,
+          "status": 200,
+          "usage": {
+            "prompt_tokens": 1352,
+            "completion_tokens": 82,
+            "total_tokens": 1434,
+            "prompt_tokens_details": {
+              "cached_tokens": 1152
+            },
+            "prompt_cache_hit_tokens": 1152,
+            "prompt_cache_miss_tokens": 200
+          },
+          "response_model": "deepseek-flash",
+          "response_id": "5b065769-8043-4820-a02c-eaaedc07489a"
+        }
+      ],
+      "raw_drawings": {
+        "old": {
+          "part_no": "HSG-001",
+          "revision": "A",
+          "features": [
+            {
+              "feature_id": "H1",
+              "kind": "diameter",
+              "nominal": "4.0",
+              "lower": "-0.1",
+              "upper": "+0.1",
+              "unit": "mm",
+              "page": 1,
+              "quote": "FEATURE H1 diameter 4.0 mm LOW -0.1 HIGH +0.1"
+            }
+          ]
+        },
+        "new": {
+          "part_no": "HSG-001",
+          "revision": "B",
+          "features": [
+            {
+              "feature_id": "H1",
+              "kind": "diameter",
+              "nominal": "4.5",
+              "lower": "-0.1",
+              "upper": "+0.1",
+              "unit": "mm",
+              "page": 1,
+              "quote": "FEATURE H1 diameter 4.5 mm LOW -0.1 HIGH +0.1"
+            }
+          ]
+        }
+      },
+      "input_files": [
+        {
+          "name": "HSG-001_A.pdf",
+          "role": "old",
+          "sha256": "4142d7aaad63686f76b45aca0143883e72a5faad7fe41af845834a59d711f374"
+        },
+        {
+          "name": "HSG-001_B.pdf",
+          "role": "new",
+          "sha256": "de5643c74ecd4a172fd6d2b6d36071d8dfd6d52af81e287bf0f8dc67e338a415"
+        },
+        {
+          "name": "ECN-001.txt",
+          "role": "ecn",
+          "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+        },
+        {
+          "name": "BOM.csv",
+          "role": "bom",
+          "sha256": "6b022da771c587a00e877b629ef7446fe4aaebe278b5c07339892f48a1154c91"
+        },
+        {
+          "name": "检验标准.csv",
+          "role": "inspection",
+          "sha256": "177728a1a2b8977cf878978d6c48218c0921d35eac08fec0af804cfd76b816ba"
+        },
+        {
+          "name": "库存.csv",
+          "role": "inventory",
+          "sha256": "c13ba955aca68fa0e3d268c944ad9d38b99e308af524512983a89b919f8fe7e2"
+        },
+        {
+          "name": "在制品.csv",
+          "role": "wip",
+          "sha256": "7eb097b90ce10f0542171f3f57a4f6b72734454f72925c40c28782e486b51a46"
+        },
+        {
+          "name": "订单.csv",
+          "role": "orders",
+          "sha256": "b7d4c5d74c99e384dac3ca992c5a92b1a3752629d889197978702f162e892c99"
+        }
+      ],
+      "result": {
+        "differences": [
+          {
+            "feature_id": "H1",
+            "kind": "diameter",
+            "old": {
+              "feature_id": "H1",
+              "kind": "diameter",
+              "nominal": "4.0",
+              "lower": "-0.1",
+              "upper": "+0.1",
+              "unit": "mm",
+              "page": 1,
+              "quote": "FEATURE H1 diameter 4.0 mm LOW -0.1 HIGH +0.1",
+              "evidence": "D-80f9b6f163c8:第 1 页:04cdf4d0a9",
+              "normalized": [
+                "4",
+                "-0.1",
+                "0.1"
+              ]
+            },
+            "new": {
+              "feature_id": "H1",
+              "kind": "diameter",
+              "nominal": "4.5",
+              "lower": "-0.1",
+              "upper": "+0.1",
+              "unit": "mm",
+              "page": 1,
+              "quote": "FEATURE H1 diameter 4.5 mm LOW -0.1 HIGH +0.1",
+              "evidence": "D-858d541ace82:第 1 页:442da8c9d9",
+              "normalized": [
+                "4.5",
+                "-0.1",
+                "0.1"
+              ]
+            },
+            "delta": "0.5",
+            "status": "名义值变化",
+            "tolerance": "不变",
+            "evidence": [
+              "D-80f9b6f163c8:第 1 页:04cdf4d0a9",
+              "D-858d541ace82:第 1 页:442da8c9d9"
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "id": "F001",
+            "object": "H1",
+            "kind": "事实",
+            "department": "工程",
+            "title": "H1 · 名义值变化",
+            "detail": "名义值 4 → 4.5 mm，差值 0.5 mm；公差不变",
+            "evidence": [
+              "D-80f9b6f163c8:第 1 页:04cdf4d0a9",
+              "D-858d541ace82:第 1 页:442da8c9d9"
+            ],
+            "rule": "",
+            "priority": "常规核查",
+            "quantity": null
+          },
+          {
+            "id": "F002",
+            "object": "H1",
+            "kind": "待核查",
+            "department": "工程",
+            "title": "核查装配与工艺适用性",
+            "detail": "需提供配合件、工艺及验证依据；当前不能认定必须换模、调参或报废。",
+            "evidence": [
+              "D-80f9b6f163c8:第 1 页:04cdf4d0a9",
+              "D-858d541ace82:第 1 页:442da8c9d9"
+            ],
+            "rule": "BR06",
+            "priority": "常规核查",
+            "quantity": null
+          },
+          {
+            "id": "F003",
+            "object": "QI-001",
+            "kind": "规则推导",
+            "department": "质量",
+            "title": "检验要求不一致",
+            "detail": "检验 4.0 mm 与新版 4.5 mm 的要求不同。建议质量部门更新评审，尚未发布新标准。",
+            "evidence": [
+              "D-7d987f1e6ae6:CSV 记录结束行 2:37c7152231",
+              "D-858d541ace82:第 1 页:442da8c9d9",
+              "manual:scope",
+              "D-5c94f4e9f9f4:段落 1:b3b6cf5f14",
+              "D-5c94f4e9f9f4:段落 2:7870a00fb7",
+              "D-5c94f4e9f9f4:段落 3:28be435638",
+              "D-5c94f4e9f9f4:段落 4:44eb05645f",
+              "D-5c94f4e9f9f4:段落 5:ff06eb930f"
+            ],
+            "rule": "BR01",
+            "priority": "优先处理",
+            "quantity": null
+          },
+          {
+            "id": "F004",
+            "object": "INV-A-001",
+            "kind": "待核查",
+            "department": "物料管理",
+            "title": "旧版库存用途待核查",
+            "detail": "A 版 600 件；分配订单：未分配。须核查用途及处置方案，不能认定报废。",
+            "evidence": [
+              "D-f40413b5e79e:CSV 记录结束行 2:47cd64c074",
+              "D-858d541ace82:第 1 页:442da8c9d9"
+            ],
+            "rule": "BR02",
+            "priority": "常规核查",
+            "quantity": "600"
+          },
+          {
+            "id": "F005",
+            "object": "WIP-A-001",
+            "kind": "待核查",
+            "department": "生产",
+            "title": "旧版在制品用途待核查",
+            "detail": "A 版 200 件；分配订单：未分配。须核查用途及处置方案，不能认定报废。",
+            "evidence": [
+              "D-1cd5da9339a1:CSV 记录结束行 2:3ed0293e1a",
+              "D-858d541ace82:第 1 页:442da8c9d9"
+            ],
+            "rule": "BR05",
+            "priority": "常规核查",
+            "quantity": "200"
+          }
+        ],
+        "evidence": {
+          "D-80f9b6f163c8:第 1 页:04cdf4d0a9": {
+            "id": "D-80f9b6f163c8:第 1 页:04cdf4d0a9",
+            "doc_id": "D-80f9b6f163c8",
+            "filename": "HSG-001_A.pdf",
+            "location": "第 1 页",
+            "text": "FEATURE H1 diameter 4.0 mm LOW -0.1 HIGH +0.1",
+            "page": 1,
+            "sha256": "4142d7aaad63686f76b45aca0143883e72a5faad7fe41af845834a59d711f374"
+          },
+          "D-858d541ace82:第 1 页:442da8c9d9": {
+            "id": "D-858d541ace82:第 1 页:442da8c9d9",
+            "doc_id": "D-858d541ace82",
+            "filename": "HSG-001_B.pdf",
+            "location": "第 1 页",
+            "text": "FEATURE H1 diameter 4.5 mm LOW -0.1 HIGH +0.1",
+            "page": 1,
+            "sha256": "de5643c74ecd4a172fd6d2b6d36071d8dfd6d52af81e287bf0f8dc67e338a415"
+          },
+          "D-6c43f7080997:CSV 记录结束行 2:cfa325f4ba": {
+            "id": "D-6c43f7080997:CSV 记录结束行 2:cfa325f4ba",
+            "doc_id": "D-6c43f7080997",
+            "filename": "BOM.csv",
+            "location": "CSV 记录结束行 2",
+            "text": "record_id=BOM-001 | product_no=CTRL-100 | product_rev=A | part_no=HSG-001 | revision=A | quantity=1",
+            "page": null,
+            "sha256": "6b022da771c587a00e877b629ef7446fe4aaebe278b5c07339892f48a1154c91"
+          },
+          "D-6c43f7080997:CSV 记录结束行 3:7f66803753": {
+            "id": "D-6c43f7080997:CSV 记录结束行 3:7f66803753",
+            "doc_id": "D-6c43f7080997",
+            "filename": "BOM.csv",
+            "location": "CSV 记录结束行 3",
+            "text": "record_id=BOM-002 | product_no=CTRL-100 | product_rev=B | part_no=HSG-001 | revision=B | quantity=1",
+            "page": null,
+            "sha256": "6b022da771c587a00e877b629ef7446fe4aaebe278b5c07339892f48a1154c91"
+          },
+          "D-7d987f1e6ae6:CSV 记录结束行 2:37c7152231": {
+            "id": "D-7d987f1e6ae6:CSV 记录结束行 2:37c7152231",
+            "doc_id": "D-7d987f1e6ae6",
+            "filename": "检验标准.csv",
+            "location": "CSV 记录结束行 2",
+            "text": "item_id=QI-001 | part_no=HSG-001 | feature_id=H1 | revision=A | nominal=4.0 | lower=-0.1 | upper=+0.1 | unit=mm | order_id=SO-NEW-001",
+            "page": null,
+            "sha256": "177728a1a2b8977cf878978d6c48218c0921d35eac08fec0af804cfd76b816ba"
+          },
+          "D-f40413b5e79e:CSV 记录结束行 2:47cd64c074": {
+            "id": "D-f40413b5e79e:CSV 记录结束行 2:47cd64c074",
+            "doc_id": "D-f40413b5e79e",
+            "filename": "库存.csv",
+            "location": "CSV 记录结束行 2",
+            "text": "record_id=INV-A-001 | batch=LOT-A-01 | part_no=HSG-001 | revision=A | quantity=600 | order_id=",
+            "page": null,
+            "sha256": "c13ba955aca68fa0e3d268c944ad9d38b99e308af524512983a89b919f8fe7e2"
+          },
+          "D-f40413b5e79e:CSV 记录结束行 3:551a8af861": {
+            "id": "D-f40413b5e79e:CSV 记录结束行 3:551a8af861",
+            "doc_id": "D-f40413b5e79e",
+            "filename": "库存.csv",
+            "location": "CSV 记录结束行 3",
+            "text": "record_id=INV-B-001 | batch=LOT-B-01 | part_no=HSG-001 | revision=B | quantity=100 | order_id=",
+            "page": null,
+            "sha256": "c13ba955aca68fa0e3d268c944ad9d38b99e308af524512983a89b919f8fe7e2"
+          },
+          "D-f40413b5e79e:CSV 记录结束行 4:9f564cf587": {
+            "id": "D-f40413b5e79e:CSV 记录结束行 4:9f564cf587",
+            "doc_id": "D-f40413b5e79e",
+            "filename": "库存.csv",
+            "location": "CSV 记录结束行 4",
+            "text": "record_id=INV-X-001 | batch=LOT-X-01 | part_no=BRK-999 | revision=A | quantity=800 | order_id=",
+            "page": null,
+            "sha256": "c13ba955aca68fa0e3d268c944ad9d38b99e308af524512983a89b919f8fe7e2"
+          },
+          "D-1cd5da9339a1:CSV 记录结束行 2:3ed0293e1a": {
+            "id": "D-1cd5da9339a1:CSV 记录结束行 2:3ed0293e1a",
+            "doc_id": "D-1cd5da9339a1",
+            "filename": "在制品.csv",
+            "location": "CSV 记录结束行 2",
+            "text": "record_id=WIP-A-001 | work_order=WO-A-01 | part_no=HSG-001 | revision=A | quantity=200 | order_id=",
+            "page": null,
+            "sha256": "7eb097b90ce10f0542171f3f57a4f6b72734454f72925c40c28782e486b51a46"
+          },
+          "D-71f2912749af:CSV 记录结束行 2:4556407b4c": {
+            "id": "D-71f2912749af:CSV 记录结束行 2:4556407b4c",
+            "doc_id": "D-71f2912749af",
+            "filename": "订单.csv",
+            "location": "CSV 记录结束行 2",
+            "text": "record_id=ORD-001 | order_id=SO-NEW-001 | part_no=CTRL-100 | revision=B | quantity=300",
+            "page": null,
+            "sha256": "b7d4c5d74c99e384dac3ca992c5a92b1a3752629d889197978702f162e892c99"
+          },
+          "D-71f2912749af:CSV 记录结束行 3:33c71a0b27": {
+            "id": "D-71f2912749af:CSV 记录结束行 3:33c71a0b27",
+            "doc_id": "D-71f2912749af",
+            "filename": "订单.csv",
+            "location": "CSV 记录结束行 3",
+            "text": "record_id=ORD-002 | order_id=SO-OLD-001 | part_no=CTRL-100 | revision=A | quantity=500",
+            "page": null,
+            "sha256": "b7d4c5d74c99e384dac3ca992c5a92b1a3752629d889197978702f162e892c99"
+          },
+          "D-5c94f4e9f9f4:段落 1:b3b6cf5f14": {
+            "id": "D-5c94f4e9f9f4:段落 1:b3b6cf5f14",
+            "doc_id": "D-5c94f4e9f9f4",
+            "filename": "ECN-001.txt",
+            "location": "段落 1",
+            "text": "模拟工程变更通知 ECN-001",
+            "page": null,
+            "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+          },
+          "D-5c94f4e9f9f4:段落 2:7870a00fb7": {
+            "id": "D-5c94f4e9f9f4:段落 2:7870a00fb7",
+            "doc_id": "D-5c94f4e9f9f4",
+            "filename": "ECN-001.txt",
+            "location": "段落 2",
+            "text": "零件 HSG-001，由 A 版变更为 B 版，特征 H1 安装孔直径由 4.0 mm 调整至 4.5 mm，上下偏差仍为 -0.1/+0.1 mm。",
+            "page": null,
+            "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+          },
+          "D-5c94f4e9f9f4:段落 3:28be435638": {
+            "id": "D-5c94f4e9f9f4:段落 3:28be435638",
+            "doc_id": "D-5c94f4e9f9f4",
+            "filename": "ECN-001.txt",
+            "location": "段落 3",
+            "text": "本次明确生效订单仅为 SO-NEW-001，要求使用 B 版。SO-OLD-001 仍按 A 版执行，不在本次生效范围。",
+            "page": null,
+            "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+          },
+          "D-5c94f4e9f9f4:段落 4:44eb05645f": {
+            "id": "D-5c94f4e9f9f4:段落 4:44eb05645f",
+            "doc_id": "D-5c94f4e9f9f4",
+            "filename": "ECN-001.txt",
+            "location": "段落 4",
+            "text": "旧版库存及未分配在制品需核查用途，不能据此直接认定报废。",
+            "page": null,
+            "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+          },
+          "D-5c94f4e9f9f4:段落 5:ff06eb930f": {
+            "id": "D-5c94f4e9f9f4:段落 5:ff06eb930f",
+            "doc_id": "D-5c94f4e9f9f4",
+            "filename": "ECN-001.txt",
+            "location": "段落 5",
+            "text": "模拟数据，不代表任何企业真实订单或生产要求。",
+            "page": null,
+            "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+          },
+          "manual:scope": {
+            "id": "manual:scope",
+            "doc_id": null,
+            "filename": "人工确认生效范围",
+            "location": "任务输入",
+            "text": "订单清单：SO-NEW-001；依据：按 ECN-001 第 3 段，仅 SO-NEW-001 使用 B 版；SO-OLD-001 不在生效范围。",
+            "page": null,
+            "sha256": null
+          }
+        },
+        "issues": [],
+        "coverage": {
+          "bom": "已覆盖",
+          "inspection": "已覆盖",
+          "inventory": "已覆盖",
+          "wip": "已覆盖",
+          "orders": "已覆盖",
+          "scope": "已确认精确订单清单"
+        },
+        "quantities": {
+          "inventory": "600",
+          "wip": "200"
+        },
+        "orders": [
+          {
+            "order_id": "SO-NEW-001",
+            "state": "生效范围内",
+            "required_revisions": [
+              "B"
+            ],
+            "path": "CTRL-100 → HSG-001",
+            "evidence": [
+              "D-71f2912749af:CSV 记录结束行 2:4556407b4c",
+              "D-6c43f7080997:CSV 记录结束行 3:7f66803753",
+              "manual:scope",
+              "D-5c94f4e9f9f4:段落 1:b3b6cf5f14",
+              "D-5c94f4e9f9f4:段落 2:7870a00fb7",
+              "D-5c94f4e9f9f4:段落 3:28be435638",
+              "D-5c94f4e9f9f4:段落 4:44eb05645f",
+              "D-5c94f4e9f9f4:段落 5:ff06eb930f"
+            ]
+          },
+          {
+            "order_id": "SO-OLD-001",
+            "state": "本次生效范围外",
+            "required_revisions": [
+              "A"
+            ],
+            "path": "CTRL-100 → HSG-001",
+            "evidence": [
+              "D-71f2912749af:CSV 记录结束行 3:33c71a0b27",
+              "D-6c43f7080997:CSV 记录结束行 2:cfa325f4ba",
+              "manual:scope",
+              "D-5c94f4e9f9f4:段落 1:b3b6cf5f14",
+              "D-5c94f4e9f9f4:段落 2:7870a00fb7",
+              "D-5c94f4e9f9f4:段落 3:28be435638",
+              "D-5c94f4e9f9f4:段落 4:44eb05645f",
+              "D-5c94f4e9f9f4:段落 5:ff06eb930f"
+            ]
+          }
+        ],
+        "drawings": {
+          "old": {
+            "part_no": "HSG-001",
+            "revision": "A",
+            "features": [
+              {
+                "feature_id": "H1",
+                "kind": "diameter",
+                "nominal": "4.0",
+                "lower": "-0.1",
+                "upper": "+0.1",
+                "unit": "mm",
+                "page": 1,
+                "quote": "FEATURE H1 diameter 4.0 mm LOW -0.1 HIGH +0.1"
+              }
+            ]
+          },
+          "new": {
+            "part_no": "HSG-001",
+            "revision": "B",
+            "features": [
+              {
+                "feature_id": "H1",
+                "kind": "diameter",
+                "nominal": "4.5",
+                "lower": "-0.1",
+                "upper": "+0.1",
+                "unit": "mm",
+                "page": 1,
+                "quote": "FEATURE H1 diameter 4.5 mm LOW -0.1 HIGH +0.1"
+              }
+            ]
+          }
+        },
+        "limits": [
+          "仅沿显式字段关联；BOM 当前支持单层展开。",
+          "缺失资料表示未覆盖；所有数量为待核查数量，不是损失。",
+          "完成评审不代表变更获批或生产动作已执行。"
+        ]
+      },
+      "decisions": {
+        "F001": {
+          "decision": "采纳",
+          "text": "",
+          "reason": "",
+          "department": "工程",
+          "needed": "",
+          "time": "2026-09-15T02:32:37.238402+00:00",
+          "finding_id": "F001"
+        },
+        "F002": {
+          "decision": "待核查",
+          "text": "",
+          "reason": "",
+          "department": "工程",
+          "needed": "配合件图纸、工艺说明与装配验证记录",
+          "time": "2026-09-15T02:32:38.908520+00:00",
+          "finding_id": "F002"
+        },
+        "F003": {
+          "decision": "采纳",
+          "text": "",
+          "reason": "",
+          "department": "质量",
+          "needed": "",
+          "time": "2026-09-15T02:32:40.585717+00:00",
+          "finding_id": "F003"
+        },
+        "F004": {
+          "decision": "待核查",
+          "text": "",
+          "reason": "",
+          "department": "物料管理",
+          "needed": "旧库存批次分配、用途及处置评估清单",
+          "time": "2026-09-15T02:32:43.011272+00:00",
+          "finding_id": "F004"
+        },
+        "F005": {
+          "decision": "待核查",
+          "text": "",
+          "reason": "",
+          "department": "生产",
+          "needed": "在制工单分配情况与后续换版安排",
+          "time": "2026-09-15T02:32:44.659268+00:00",
+          "finding_id": "F005"
+        }
+      }
+    },
+    {
+      "case": "录屏文件扰动",
+      "id": "R-600aa7e0076d",
+      "state": "待评审",
+      "started": "2026-09-15T02:33:29.972943+00:00",
+      "ended": "2026-09-15T02:33:33.193436+00:00",
+      "seconds": 3.212,
+      "input_revision": 16,
+      "config": {
+        "model": "deepseek-flash",
+        "base_url": "https://api.deepseek.com",
+        "prompt_version": "drawing-v1.0",
+        "rule_version": "engineering-v1.0",
+        "cache": "none"
+      },
+      "calls": [
+        {
+          "document": "HSG-001_A.pdf",
+          "attempt": 1,
+          "seconds": 1.652,
+          "status": 200,
+          "usage": {
+            "prompt_tokens": 1352,
+            "completion_tokens": 82,
+            "total_tokens": 1434,
+            "prompt_tokens_details": {
+              "cached_tokens": 1152
+            },
+            "prompt_cache_hit_tokens": 1152,
+            "prompt_cache_miss_tokens": 200
+          },
+          "response_model": "deepseek-flash",
+          "response_id": "ab2b0a88-f5ca-4ce7-89c2-17ed32416c8f"
+        },
+        {
+          "document": "HSG-001_B_5mm.pdf",
+          "attempt": 1,
+          "seconds": 1.418,
+          "status": 200,
+          "usage": {
+            "prompt_tokens": 1352,
+            "completion_tokens": 77,
+            "total_tokens": 1429,
+            "prompt_tokens_details": {
+              "cached_tokens": 128
+            },
+            "prompt_cache_hit_tokens": 128,
+            "prompt_cache_miss_tokens": 1224
+          },
+          "response_model": "deepseek-flash",
+          "response_id": "b32c054b-acf5-4b31-8616-8e83bfe2eb84"
+        }
+      ],
+      "raw_drawings": {
+        "old": {
+          "part_no": "HSG-001",
+          "revision": "A",
+          "features": [
+            {
+              "feature_id": "H1",
+              "kind": "diameter",
+              "nominal": "4.0",
+              "lower": "-0.1",
+              "upper": "+0.1",
+              "unit": "mm",
+              "page": 1,
+              "quote": "FEATURE H1 diameter 4.0 mm LOW -0.1 HIGH +0.1"
+            }
+          ]
+        },
+        "new": {
+          "part_no": "HSG-001",
+          "revision": "B",
+          "features": [
+            {
+              "feature_id": "H1",
+              "kind": "diameter",
+              "nominal": "5.0",
+              "lower": "-0.1",
+              "upper": "+0.1",
+              "unit": "mm",
+              "page": 1,
+              "quote": "H1: DIA 5.0 +/- 0.1 mm"
+            }
+          ]
+        }
+      },
+      "input_files": [
+        {
+          "name": "HSG-001_A.pdf",
+          "role": "old",
+          "sha256": "4142d7aaad63686f76b45aca0143883e72a5faad7fe41af845834a59d711f374"
+        },
+        {
+          "name": "ECN-001.txt",
+          "role": "ecn",
+          "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+        },
+        {
+          "name": "BOM.csv",
+          "role": "bom",
+          "sha256": "6b022da771c587a00e877b629ef7446fe4aaebe278b5c07339892f48a1154c91"
+        },
+        {
+          "name": "检验标准.csv",
+          "role": "inspection",
+          "sha256": "177728a1a2b8977cf878978d6c48218c0921d35eac08fec0af804cfd76b816ba"
+        },
+        {
+          "name": "库存.csv",
+          "role": "inventory",
+          "sha256": "c13ba955aca68fa0e3d268c944ad9d38b99e308af524512983a89b919f8fe7e2"
+        },
+        {
+          "name": "在制品.csv",
+          "role": "wip",
+          "sha256": "7eb097b90ce10f0542171f3f57a4f6b72734454f72925c40c28782e486b51a46"
+        },
+        {
+          "name": "订单.csv",
+          "role": "orders",
+          "sha256": "b7d4c5d74c99e384dac3ca992c5a92b1a3752629d889197978702f162e892c99"
+        },
+        {
+          "name": "HSG-001_B_5mm.pdf",
+          "role": "new",
+          "sha256": "4e28c66137188fd531dc15567c63784373484300ad513efc932aa87f4e785767"
+        }
+      ],
+      "result": {
+        "differences": [
+          {
+            "feature_id": "H1",
+            "kind": "diameter",
+            "old": {
+              "feature_id": "H1",
+              "kind": "diameter",
+              "nominal": "4.0",
+              "lower": "-0.1",
+              "upper": "+0.1",
+              "unit": "mm",
+              "page": 1,
+              "quote": "FEATURE H1 diameter 4.0 mm LOW -0.1 HIGH +0.1",
+              "evidence": "D-80f9b6f163c8:第 1 页:04cdf4d0a9",
+              "normalized": [
+                "4",
+                "-0.1",
+                "0.1"
+              ]
+            },
+            "new": {
+              "feature_id": "H1",
+              "kind": "diameter",
+              "nominal": "5.0",
+              "lower": "-0.1",
+              "upper": "+0.1",
+              "unit": "mm",
+              "page": 1,
+              "quote": "H1: DIA 5.0 +/- 0.1 mm",
+              "evidence": "D-f23e79043ba0:第 1 页:dfbe4b205a",
+              "normalized": [
+                "5",
+                "-0.1",
+                "0.1"
+              ]
+            },
+            "delta": "1",
+            "status": "名义值变化",
+            "tolerance": "不变",
+            "evidence": [
+              "D-80f9b6f163c8:第 1 页:04cdf4d0a9",
+              "D-f23e79043ba0:第 1 页:dfbe4b205a"
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "id": "F001",
+            "object": "H1",
+            "kind": "事实",
+            "department": "工程",
+            "title": "H1 · 名义值变化",
+            "detail": "名义值 4 → 5 mm，差值 1 mm；公差不变",
+            "evidence": [
+              "D-80f9b6f163c8:第 1 页:04cdf4d0a9",
+              "D-f23e79043ba0:第 1 页:dfbe4b205a"
+            ],
+            "rule": "",
+            "priority": "常规核查",
+            "quantity": null
+          },
+          {
+            "id": "F002",
+            "object": "H1",
+            "kind": "待核查",
+            "department": "工程",
+            "title": "核查装配与工艺适用性",
+            "detail": "需提供配合件、工艺及验证依据；当前不能认定必须换模、调参或报废。",
+            "evidence": [
+              "D-80f9b6f163c8:第 1 页:04cdf4d0a9",
+              "D-f23e79043ba0:第 1 页:dfbe4b205a"
+            ],
+            "rule": "BR06",
+            "priority": "常规核查",
+            "quantity": null
+          },
+          {
+            "id": "F003",
+            "object": "QI-001",
+            "kind": "规则推导",
+            "department": "质量",
+            "title": "检验要求不一致",
+            "detail": "检验 4.0 mm 与新版 5.0 mm 的要求不同。建议质量部门更新评审，尚未发布新标准。",
+            "evidence": [
+              "D-7d987f1e6ae6:CSV 记录结束行 2:37c7152231",
+              "D-f23e79043ba0:第 1 页:dfbe4b205a",
+              "manual:scope",
+              "D-5c94f4e9f9f4:段落 1:b3b6cf5f14",
+              "D-5c94f4e9f9f4:段落 2:7870a00fb7",
+              "D-5c94f4e9f9f4:段落 3:28be435638",
+              "D-5c94f4e9f9f4:段落 4:44eb05645f",
+              "D-5c94f4e9f9f4:段落 5:ff06eb930f"
+            ],
+            "rule": "BR01",
+            "priority": "优先处理",
+            "quantity": null
+          },
+          {
+            "id": "F004",
+            "object": "INV-A-001",
+            "kind": "待核查",
+            "department": "物料管理",
+            "title": "旧版库存用途待核查",
+            "detail": "A 版 600 件；分配订单：未分配。须核查用途及处置方案，不能认定报废。",
+            "evidence": [
+              "D-f40413b5e79e:CSV 记录结束行 2:47cd64c074",
+              "D-f23e79043ba0:第 1 页:dfbe4b205a"
+            ],
+            "rule": "BR02",
+            "priority": "常规核查",
+            "quantity": "600"
+          },
+          {
+            "id": "F005",
+            "object": "WIP-A-001",
+            "kind": "待核查",
+            "department": "生产",
+            "title": "旧版在制品用途待核查",
+            "detail": "A 版 200 件；分配订单：未分配。须核查用途及处置方案，不能认定报废。",
+            "evidence": [
+              "D-1cd5da9339a1:CSV 记录结束行 2:3ed0293e1a",
+              "D-f23e79043ba0:第 1 页:dfbe4b205a"
+            ],
+            "rule": "BR05",
+            "priority": "常规核查",
+            "quantity": "200"
+          }
+        ],
+        "evidence": {
+          "D-80f9b6f163c8:第 1 页:04cdf4d0a9": {
+            "id": "D-80f9b6f163c8:第 1 页:04cdf4d0a9",
+            "doc_id": "D-80f9b6f163c8",
+            "filename": "HSG-001_A.pdf",
+            "location": "第 1 页",
+            "text": "FEATURE H1 diameter 4.0 mm LOW -0.1 HIGH +0.1",
+            "page": 1,
+            "sha256": "4142d7aaad63686f76b45aca0143883e72a5faad7fe41af845834a59d711f374"
+          },
+          "D-f23e79043ba0:第 1 页:dfbe4b205a": {
+            "id": "D-f23e79043ba0:第 1 页:dfbe4b205a",
+            "doc_id": "D-f23e79043ba0",
+            "filename": "HSG-001_B_5mm.pdf",
+            "location": "第 1 页",
+            "text": "H1: DIA 5.0 +/- 0.1 mm",
+            "page": 1,
+            "sha256": "4e28c66137188fd531dc15567c63784373484300ad513efc932aa87f4e785767"
+          },
+          "D-6c43f7080997:CSV 记录结束行 2:cfa325f4ba": {
+            "id": "D-6c43f7080997:CSV 记录结束行 2:cfa325f4ba",
+            "doc_id": "D-6c43f7080997",
+            "filename": "BOM.csv",
+            "location": "CSV 记录结束行 2",
+            "text": "record_id=BOM-001 | product_no=CTRL-100 | product_rev=A | part_no=HSG-001 | revision=A | quantity=1",
+            "page": null,
+            "sha256": "6b022da771c587a00e877b629ef7446fe4aaebe278b5c07339892f48a1154c91"
+          },
+          "D-6c43f7080997:CSV 记录结束行 3:7f66803753": {
+            "id": "D-6c43f7080997:CSV 记录结束行 3:7f66803753",
+            "doc_id": "D-6c43f7080997",
+            "filename": "BOM.csv",
+            "location": "CSV 记录结束行 3",
+            "text": "record_id=BOM-002 | product_no=CTRL-100 | product_rev=B | part_no=HSG-001 | revision=B | quantity=1",
+            "page": null,
+            "sha256": "6b022da771c587a00e877b629ef7446fe4aaebe278b5c07339892f48a1154c91"
+          },
+          "D-7d987f1e6ae6:CSV 记录结束行 2:37c7152231": {
+            "id": "D-7d987f1e6ae6:CSV 记录结束行 2:37c7152231",
+            "doc_id": "D-7d987f1e6ae6",
+            "filename": "检验标准.csv",
+            "location": "CSV 记录结束行 2",
+            "text": "item_id=QI-001 | part_no=HSG-001 | feature_id=H1 | revision=A | nominal=4.0 | lower=-0.1 | upper=+0.1 | unit=mm | order_id=SO-NEW-001",
+            "page": null,
+            "sha256": "177728a1a2b8977cf878978d6c48218c0921d35eac08fec0af804cfd76b816ba"
+          },
+          "D-f40413b5e79e:CSV 记录结束行 2:47cd64c074": {
+            "id": "D-f40413b5e79e:CSV 记录结束行 2:47cd64c074",
+            "doc_id": "D-f40413b5e79e",
+            "filename": "库存.csv",
+            "location": "CSV 记录结束行 2",
+            "text": "record_id=INV-A-001 | batch=LOT-A-01 | part_no=HSG-001 | revision=A | quantity=600 | order_id=",
+            "page": null,
+            "sha256": "c13ba955aca68fa0e3d268c944ad9d38b99e308af524512983a89b919f8fe7e2"
+          },
+          "D-f40413b5e79e:CSV 记录结束行 3:551a8af861": {
+            "id": "D-f40413b5e79e:CSV 记录结束行 3:551a8af861",
+            "doc_id": "D-f40413b5e79e",
+            "filename": "库存.csv",
+            "location": "CSV 记录结束行 3",
+            "text": "record_id=INV-B-001 | batch=LOT-B-01 | part_no=HSG-001 | revision=B | quantity=100 | order_id=",
+            "page": null,
+            "sha256": "c13ba955aca68fa0e3d268c944ad9d38b99e308af524512983a89b919f8fe7e2"
+          },
+          "D-f40413b5e79e:CSV 记录结束行 4:9f564cf587": {
+            "id": "D-f40413b5e79e:CSV 记录结束行 4:9f564cf587",
+            "doc_id": "D-f40413b5e79e",
+            "filename": "库存.csv",
+            "location": "CSV 记录结束行 4",
+            "text": "record_id=INV-X-001 | batch=LOT-X-01 | part_no=BRK-999 | revision=A | quantity=800 | order_id=",
+            "page": null,
+            "sha256": "c13ba955aca68fa0e3d268c944ad9d38b99e308af524512983a89b919f8fe7e2"
+          },
+          "D-1cd5da9339a1:CSV 记录结束行 2:3ed0293e1a": {
+            "id": "D-1cd5da9339a1:CSV 记录结束行 2:3ed0293e1a",
+            "doc_id": "D-1cd5da9339a1",
+            "filename": "在制品.csv",
+            "location": "CSV 记录结束行 2",
+            "text": "record_id=WIP-A-001 | work_order=WO-A-01 | part_no=HSG-001 | revision=A | quantity=200 | order_id=",
+            "page": null,
+            "sha256": "7eb097b90ce10f0542171f3f57a4f6b72734454f72925c40c28782e486b51a46"
+          },
+          "D-71f2912749af:CSV 记录结束行 2:4556407b4c": {
+            "id": "D-71f2912749af:CSV 记录结束行 2:4556407b4c",
+            "doc_id": "D-71f2912749af",
+            "filename": "订单.csv",
+            "location": "CSV 记录结束行 2",
+            "text": "record_id=ORD-001 | order_id=SO-NEW-001 | part_no=CTRL-100 | revision=B | quantity=300",
+            "page": null,
+            "sha256": "b7d4c5d74c99e384dac3ca992c5a92b1a3752629d889197978702f162e892c99"
+          },
+          "D-71f2912749af:CSV 记录结束行 3:33c71a0b27": {
+            "id": "D-71f2912749af:CSV 记录结束行 3:33c71a0b27",
+            "doc_id": "D-71f2912749af",
+            "filename": "订单.csv",
+            "location": "CSV 记录结束行 3",
+            "text": "record_id=ORD-002 | order_id=SO-OLD-001 | part_no=CTRL-100 | revision=A | quantity=500",
+            "page": null,
+            "sha256": "b7d4c5d74c99e384dac3ca992c5a92b1a3752629d889197978702f162e892c99"
+          },
+          "D-5c94f4e9f9f4:段落 1:b3b6cf5f14": {
+            "id": "D-5c94f4e9f9f4:段落 1:b3b6cf5f14",
+            "doc_id": "D-5c94f4e9f9f4",
+            "filename": "ECN-001.txt",
+            "location": "段落 1",
+            "text": "模拟工程变更通知 ECN-001",
+            "page": null,
+            "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+          },
+          "D-5c94f4e9f9f4:段落 2:7870a00fb7": {
+            "id": "D-5c94f4e9f9f4:段落 2:7870a00fb7",
+            "doc_id": "D-5c94f4e9f9f4",
+            "filename": "ECN-001.txt",
+            "location": "段落 2",
+            "text": "零件 HSG-001，由 A 版变更为 B 版，特征 H1 安装孔直径由 4.0 mm 调整至 4.5 mm，上下偏差仍为 -0.1/+0.1 mm。",
+            "page": null,
+            "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+          },
+          "D-5c94f4e9f9f4:段落 3:28be435638": {
+            "id": "D-5c94f4e9f9f4:段落 3:28be435638",
+            "doc_id": "D-5c94f4e9f9f4",
+            "filename": "ECN-001.txt",
+            "location": "段落 3",
+            "text": "本次明确生效订单仅为 SO-NEW-001，要求使用 B 版。SO-OLD-001 仍按 A 版执行，不在本次生效范围。",
+            "page": null,
+            "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+          },
+          "D-5c94f4e9f9f4:段落 4:44eb05645f": {
+            "id": "D-5c94f4e9f9f4:段落 4:44eb05645f",
+            "doc_id": "D-5c94f4e9f9f4",
+            "filename": "ECN-001.txt",
+            "location": "段落 4",
+            "text": "旧版库存及未分配在制品需核查用途，不能据此直接认定报废。",
+            "page": null,
+            "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+          },
+          "D-5c94f4e9f9f4:段落 5:ff06eb930f": {
+            "id": "D-5c94f4e9f9f4:段落 5:ff06eb930f",
+            "doc_id": "D-5c94f4e9f9f4",
+            "filename": "ECN-001.txt",
+            "location": "段落 5",
+            "text": "模拟数据，不代表任何企业真实订单或生产要求。",
+            "page": null,
+            "sha256": "0f319e56aa97f40234dccdce081df3c7e6eba455703d91de16829fa36062faa8"
+          },
+          "manual:scope": {
+            "id": "manual:scope",
+            "doc_id": null,
+            "filename": "人工确认生效范围",
+            "location": "任务输入",
+            "text": "订单清单：SO-NEW-001；依据：按 ECN-001 第 3 段，仅 SO-NEW-001 使用 B 版；SO-OLD-001 不在生效范围。",
+            "page": null,
+            "sha256": null
+          }
+        },
+        "issues": [],
+        "coverage": {
+          "bom": "已覆盖",
+          "inspection": "已覆盖",
+          "inventory": "已覆盖",
+          "wip": "已覆盖",
+          "orders": "已覆盖",
+          "scope": "已确认精确订单清单"
+        },
+        "quantities": {
+          "inventory": "600",
+          "wip": "200"
+        },
+        "orders": [
+          {
+            "order_id": "SO-NEW-001",
+            "state": "生效范围内",
+            "required_revisions": [
+              "B"
+            ],
+            "path": "CTRL-100 → HSG-001",
+            "evidence": [
+              "D-71f2912749af:CSV 记录结束行 2:4556407b4c",
+              "D-6c43f7080997:CSV 记录结束行 3:7f66803753",
+              "manual:scope",
+              "D-5c94f4e9f9f4:段落 1:b3b6cf5f14",
+              "D-5c94f4e9f9f4:段落 2:7870a00fb7",
+              "D-5c94f4e9f9f4:段落 3:28be435638",
+              "D-5c94f4e9f9f4:段落 4:44eb05645f",
+              "D-5c94f4e9f9f4:段落 5:ff06eb930f"
+            ]
+          },
+          {
+            "order_id": "SO-OLD-001",
+            "state": "本次生效范围外",
+            "required_revisions": [
+              "A"
+            ],
+            "path": "CTRL-100 → HSG-001",
+            "evidence": [
+              "D-71f2912749af:CSV 记录结束行 3:33c71a0b27",
+              "D-6c43f7080997:CSV 记录结束行 2:cfa325f4ba",
+              "manual:scope",
+              "D-5c94f4e9f9f4:段落 1:b3b6cf5f14",
+              "D-5c94f4e9f9f4:段落 2:7870a00fb7",
+              "D-5c94f4e9f9f4:段落 3:28be435638",
+              "D-5c94f4e9f9f4:段落 4:44eb05645f",
+              "D-5c94f4e9f9f4:段落 5:ff06eb930f"
+            ]
+          }
+        ],
+        "drawings": {
+          "old": {
+            "part_no": "HSG-001",
+            "revision": "A",
+            "features": [
+              {
+                "feature_id": "H1",
+                "kind": "diameter",
+                "nominal": "4.0",
+                "lower": "-0.1",
+                "upper": "+0.1",
+                "unit": "mm",
+                "page": 1,
+                "quote": "FEATURE H1 diameter 4.0 mm LOW -0.1 HIGH +0.1"
+              }
+            ]
+          },
+          "new": {
+            "part_no": "HSG-001",
+            "revision": "B",
+            "features": [
+              {
+                "feature_id": "H1",
+                "kind": "diameter",
+                "nominal": "5.0",
+                "lower": "-0.1",
+                "upper": "+0.1",
+                "unit": "mm",
+                "page": 1,
+                "quote": "H1: DIA 5.0 +/- 0.1 mm"
+              }
+            ]
+          }
+        },
+        "limits": [
+          "仅沿显式字段关联；BOM 当前支持单层展开。",
+          "缺失资料表示未覆盖；所有数量为待核查数量，不是损失。",
+          "完成评审不代表变更获批或生产动作已执行。"
+        ]
+      },
+      "decisions": {}
+    }
+  ]
+}

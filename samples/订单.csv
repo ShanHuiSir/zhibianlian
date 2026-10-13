@@ -1,0 +1,3 @@
+﻿record_id,order_id,part_no,revision,quantity
+ORD-001,SO-NEW-001,CTRL-100,B,300
+ORD-002,SO-OLD-001,CTRL-100,A,500

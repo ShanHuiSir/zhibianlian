@@ -1,0 +1,9 @@
+{
+  "clean_dependency_install": true,
+  "pytest_passed": 35,
+  "standalone_server": true,
+  "key_absent": true,
+  "local_case_delta": "0.5",
+  "inventory": "600",
+  "wip": "200"
+}

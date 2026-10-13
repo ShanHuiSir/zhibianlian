@@ -1,0 +1,4 @@
+﻿record_id,batch,part_no,revision,quantity,order_id
+INV-A-001,LOT-A-01,HSG-001,A,600,
+INV-B-001,LOT-B-01,HSG-001,B,100,
+INV-X-001,LOT-X-01,BRK-999,A,800,

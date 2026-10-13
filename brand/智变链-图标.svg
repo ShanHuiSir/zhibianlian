@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">智变链</title>
+  <desc id="desc">以字母 Z 为骨架，青绿色与深青色链节交叠，中央菱形留白代表可核查的变更节点。</desc>
+  <defs>
+    <mask id="node" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
+      <rect width="512" height="512" fill="white"/>
+      <path d="M256 232 280 256 256 280 232 256Z" fill="black"/>
+    </mask>
+  </defs>
+  <g mask="url(#node)">
+    <path fill="#087f77" d="M104 96H360L424 160 264 320 216 272 328 160H104Z"/>
+    <path fill="#142e32" d="M408 416H152L88 352 248 192 296 240 184 352H408Z"/>
+  </g>
+</svg>

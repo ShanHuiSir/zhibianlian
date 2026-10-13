@@ -1,0 +1,34 @@
+[
+  {
+    "role": "old",
+    "file": "HSG-001_A.pdf"
+  },
+  {
+    "role": "new",
+    "file": "HSG-001_B.pdf"
+  },
+  {
+    "role": "ecn",
+    "file": "ECN-001.txt"
+  },
+  {
+    "role": "bom",
+    "file": "BOM.csv"
+  },
+  {
+    "role": "inspection",
+    "file": "检验标准.csv"
+  },
+  {
+    "role": "inventory",
+    "file": "库存.csv"
+  },
+  {
+    "role": "wip",
+    "file": "在制品.csv"
+  },
+  {
+    "role": "orders",
+    "file": "订单.csv"
+  }
+]
