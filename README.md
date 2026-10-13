@@ -19,11 +19,15 @@
 
 需要 Python 3.11 或 3.12、Chrome / Edge，以及首次安装依赖时可用的网络。已验证环境为 macOS + Python 3.12 + Chrome；Windows 启动脚本已提供，尚未在 Windows 实机验证。服务默认只监听 `127.0.0.1:8765`。
 
+中文字体和演示视频使用 Git LFS 保存。先按 [Git LFS 官方说明](https://git-lfs.com/) 安装 Git LFS（macOS 可用 `brew install git-lfs`），再运行下面的克隆步骤。`git lfs pull` 用于确保下载的是完整字体和视频。直接下载仓库 ZIP 时可能只包含 LFS 指针，请优先使用 Git 克隆。
+
 macOS / Linux：
 
 ```bash
+git lfs install
 git clone https://github.com/ShanHuiSir/zhibianlian.git
 cd zhibianlian
+git lfs pull
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 cp .env.example .env
@@ -34,8 +38,10 @@ cp .env.example .env
 Windows PowerShell：
 
 ```powershell
+git lfs install
 git clone https://github.com/ShanHuiSir/zhibianlian.git
 cd zhibianlian
+git lfs pull
 py -3 -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
 Copy-Item .env.example .env
